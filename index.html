@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="headerTab.css">
     <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+          margin: 0;
+          padding: 0;
+          box-sizing: inherit; }
+
+        html {
+            box-sizing: border-box;
+            scroll-behavior: smooth; 
+        }
+
+        .grid{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+        }
+    </style>
 </head>
-<body>
-    ayam
+<body class="grid">
+    <header>
+        
+    </header>
+    <div class="sidepanel">
+        <div>
+            <ul>
+                <li>
+                    Commissons
+                </li>
+                <li>
+                    About
+                </li>
+                <li>
+                    Home
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/kristian.ayam/"><img class="logo" src="fb.png" alt="FB"></a>
+                </li>
+                <li>
+                    <a href="https://www.deviantart.com/kristiyam"><img class="logo" src="da.png" alt="DA"></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/channel/UCdXyYTpGSbMZ_wvEhqMfQfg"><img class="logo" src="yt.png" alt="YT"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
