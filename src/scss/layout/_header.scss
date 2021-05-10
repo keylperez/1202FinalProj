@@ -1,0 +1,15 @@
+header {
+  grid-column: 1 / -1;
+  nav {
+    grid-column: 1 / -1;
+    height: 80px;
+    background-color: $primary-color;
+    .logo {
+      height: 20px;
+      width: 20px;
+    }
+  }
+  .sideBar {
+    height: 100%;
+  }
+}

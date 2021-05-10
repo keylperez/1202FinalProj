@@ -1,0 +1,32 @@
+$primary-color-light: #786694;
+$primary-color: #2f283a;
+$primary-color-dark: #17131c;
+
+$secondary-color-light: #709c81;
+$secondary-color: #283a2f;
+$secondary-color-dark: #131c17;
+
+$tertiary-color-light: #a38a7a;
+$tertiary-color: #3a2f28;
+$tertiary-color-dark: #1c1713;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-weight: 400;
+  background-image: url("/src/img/warframe.png");
+  background-size: cover;
+}

@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-weight: 400;
+  background-image: url("/src/img/warframe.png");
+  background-size: cover; }
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%; }
+
+header {
+  grid-column: 1 / -1; }
+  header nav {
+    grid-column: 1 / -1;
+    height: 80px;
+    background-color: #2f283a; }
+    header nav .logo {
+      height: 20px;
+      width: 20px; }
+  header .sideBar {
+    height: 100%; }
