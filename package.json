@@ -4,8 +4,8 @@
   "description": "Game inventory website",
   "main": "index.js",
   "scripts": {
-    "compile:scss": "node-sass src/sass/main.scss src/css/style.css",
-    "watch:scss": "node-sass src/sass/main.scss src/css/style.css -w"
+    "compile:scss": "node-sass src/scss/main.scss src/css/style.css",
+    "watch:scss": "node-sass src/scss/main.scss src/css/style.css -w"
   },
   "repository": {
     "type": "git",
