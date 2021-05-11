@@ -8,7 +8,7 @@ $secondary-color-dark: #131c17;
 
 $tertiary-color-light: #a38a7a;
 $tertiary-color: #3a2f28;
-$tertiary-color-dark: #1c1713;
+$tertiary-color-dark: #261f1a;
 
 *,
 *::after,
@@ -27,6 +27,6 @@ body {
   font-family: "Raleway", sans-serif;
   color: white;
   font-weight: 400;
-  background-image: url("/src/img/warframe.png");
+  background-image: url("/src/img/bg/warframe.png");
   background-size: cover;
 }
