@@ -1,0 +1,12 @@
+.inventory {
+  &Bar {
+    grid-column: 2 / 6;
+    overflow: auto;
+    height: 94vh;
+    padding: 50px;
+    padding-top: 500px;
+  }
+  &Heading {
+    grid-column: 1 / -1;
+  }
+}
