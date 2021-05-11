@@ -21,6 +21,7 @@ body {
   grid-template-columns: 20% 20% 20% 20% 20%; }
 
 .inventoryBar {
+  display: none;
   grid-column: 2 / 6;
   overflow: auto;
   height: 94vh;
@@ -71,3 +72,22 @@ header {
   left: 2.5%;
   margin-right: 15px;
   transform: translate(0, -50%); }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.activeTab{
+  display: block;
+}
