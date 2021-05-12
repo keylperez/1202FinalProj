@@ -1,12 +1,19 @@
 .inventory {
   &Bar {
-    grid-column: 2 / 6;
+    display: none;
     overflow: auto;
     height: 94vh;
     padding: 50px;
     padding-top: 500px;
+    &Container {
+      grid-column: 2 / 6;
+    }
   }
   &Heading {
     grid-column: 1 / -1;
   }
+}
+
+.activeTab {
+  display: block;
 }
