@@ -3,38 +3,36 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
   scroll-behavior: smooth;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   font-family: "Raleway", sans-serif;
   color: white;
   font-weight: 400;
   background-image: url("../../src/img/bg/warframe.png");
-  background-size: cover;
-}
+  background-size: cover; }
 
 .gridContainer {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-}
+  grid-template-columns: 20% 20% 20% 20% 20%; }
 
 .inventoryBar {
+  display: none;
   grid-column: 2 / 6;
   overflow: auto;
   height: 94vh;
   padding: 50px;
-  padding-top: 500px;
-}
+  padding-top: 500px; }
 
 .inventoryHeading {
-  grid-column: 1 / -1;
-}
+  grid-column: 1 / -1; }
+
+.activeTab {
+  display: block; }
 
 header {
   grid-column: 1 / -1;
@@ -42,40 +40,32 @@ header {
   grid-template-rows: 6vh 94vh;
   justify-items: stretch;
   align-items: stretch;
-  overflow: hidden;
-}
-header nav {
-  grid-column: 1 / -1;
-  background-color: #2f283a;
-}
-header nav .logo {
-  height: 20px;
-  width: 20px;
-}
-header .sideBar {
-  grid-row: 2 / 3;
-  background-color: rgba(19, 28, 23, 0.8);
-}
+  overflow: hidden; }
+  header nav {
+    grid-column: 1 / -1;
+    background-color: #2f283a; }
+    header nav .logo {
+      height: 20px;
+      width: 20px; }
+  header .sideBar {
+    grid-row: 2 / 3;
+    background-color: rgba(19, 28, 23, 0.8); }
 
 .gameLabel {
   height: 30px;
   width: 350px;
   margin: 3px auto;
-  background-color: #261f1a;
-}
-.gameLabel span {
-  display: inline-block;
-  width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.gameLabel:hover {
-  cursor: pointer;
-}
-.gameLabelContainer {
-  height: 100%;
-}
+  background-color: #261f1a; }
+  .gameLabel span {
+    display: inline-block;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .gameLabel:hover {
+    cursor: pointer; }
+  .gameLabelContainer {
+    height: 100%; }
 
 .gameIcon {
   position: relative;
@@ -84,5 +74,4 @@ header .sideBar {
   top: 50%;
   left: 2.5%;
   margin-right: 15px;
-  transform: translate(0, -50%);
-}
+  transform: translate(0, -50%); }
