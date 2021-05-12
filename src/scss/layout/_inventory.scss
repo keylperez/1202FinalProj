@@ -1,5 +1,6 @@
 .inventory {
   &Bar {
+    display: none;
     grid-column: 2 / 6;
     overflow: auto;
     height: 94vh;
@@ -9,4 +10,8 @@
   &Heading {
     grid-column: 1 / -1;
   }
+}
+
+.activeTab {
+  display: block;
 }
