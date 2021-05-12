@@ -93,7 +93,3 @@ header .sideBar {
   margin-right: 15px;
   transform: translate(0, -50%);
 }
-
-.activeTab {
-  display: block;
-}
