@@ -1,0 +1,44 @@
+[33m8aa8d35[m[33m ([m[1;36mHEAD -> [m[1;32mcaleb[m[33m, [m[1;31morigin/ayam[m[33m, [m[1;32mayam[m[33m)[m HEAD@{0}: rebase (abort): updating HEAD
+[33m8aa8d35[m[33m ([m[1;36mHEAD -> [m[1;32mcaleb[m[33m, [m[1;31morigin/ayam[m[33m, [m[1;32mayam[m[33m)[m HEAD@{1}: rebase (abort): updating HEAD
+[33m3b02e6c[m[33m ([m[1;31morigin/caleb[m[33m)[m HEAD@{2}: commit: Background functionality
+[33ma671265[m HEAD@{3}: commit: fixed changes
+[33m50351ef[m HEAD@{4}: commit: fixed changes
+[33m6b10d28[m HEAD@{5}: checkout: moving from main to caleb
+[33m90e3b2c[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{6}: pull origin main: Fast-forward
+[33mb4c1105[m HEAD@{7}: checkout: moving from caleb to main
+[33m6b10d28[m HEAD@{8}: commit: Merged with main
+[33m8aa8d35[m[33m ([m[1;36mHEAD -> [m[1;32mcaleb[m[33m, [m[1;31morigin/ayam[m[33m, [m[1;32mayam[m[33m)[m HEAD@{9}: checkout: moving from main to caleb
+[33mb4c1105[m HEAD@{10}: checkout: moving from caleb to main
+[33m8aa8d35[m[33m ([m[1;36mHEAD -> [m[1;32mcaleb[m[33m, [m[1;31morigin/ayam[m[33m, [m[1;32mayam[m[33m)[m HEAD@{11}: checkout: moving from f7914e8cbc7084dd96fc97a1d1c4e3b7fc877768 to caleb
+[33mf7914e8[m HEAD@{12}: commit (merge): merged with main
+[33mbae7063[m HEAD@{13}: commit: test
+[33m87a9a96[m HEAD@{14}: rebase (start): checkout main
+[33m8aa8d35[m[33m ([m[1;36mHEAD -> [m[1;32mcaleb[m[33m, [m[1;31morigin/ayam[m[33m, [m[1;32mayam[m[33m)[m HEAD@{15}: checkout: moving from main to caleb
+[33mb4c1105[m HEAD@{16}: checkout: moving from caleb to main
+[33m8aa8d35[m[33m ([m[1;36mHEAD -> [m[1;32mcaleb[m[33m, [m[1;31morigin/ayam[m[33m, [m[1;32mayam[m[33m)[m HEAD@{17}: merge ayam: Fast-forward
+[33m7867266[m HEAD@{18}: checkout: moving from caleb to caleb
+[33m7867266[m HEAD@{19}: checkout: moving from ayam to caleb
+[33m8aa8d35[m[33m ([m[1;36mHEAD -> [m[1;32mcaleb[m[33m, [m[1;31morigin/ayam[m[33m, [m[1;32mayam[m[33m)[m HEAD@{20}: commit (merge): merge caleb branch
+[33m87a9a96[m HEAD@{21}: checkout: moving from caleb to ayam
+[33m7867266[m HEAD@{22}: commit: fixed bg img file path
+[33mb777f19[m HEAD@{23}: commit: Compressed Images
+[33me89c6ec[m HEAD@{24}: commit: layout
+[33m5b6ef0b[m HEAD@{25}: commit: more
+[33ma494a4c[m HEAD@{26}: checkout: moving from ayam to caleb
+[33m87a9a96[m HEAD@{27}: pull origin ayam: Fast-forward
+[33mea4de61[m HEAD@{28}: checkout: moving from caleb to ayam
+[33ma494a4c[m HEAD@{29}: commit: caleb
+[33mb4c1105[m HEAD@{30}: checkout: moving from main to caleb
+[33mb4c1105[m HEAD@{31}: checkout: moving from ayam to main
+[33mea4de61[m HEAD@{32}: checkout: moving from backup to ayam
+[33mb85f63f[m[33m ([m[1;31morigin/backup[m[33m, [m[1;32mbackup[m[33m)[m HEAD@{33}: commit: backup
+[33mea4de61[m HEAD@{34}: checkout: moving from ayam to backup
+[33mea4de61[m HEAD@{35}: commit: ayam
+[33mb4c1105[m HEAD@{36}: checkout: moving from main to ayam
+[33mb4c1105[m HEAD@{37}: checkout: moving from saman to main
+[33m1357508[m[33m ([m[1;31morigin/saman[m[33m, [m[1;32msaman[m[33m)[m HEAD@{38}: commit: saman
+[33mb4c1105[m HEAD@{39}: checkout: moving from main to saman
+[33mb4c1105[m HEAD@{40}: commit (merge): pre-phase
+[33m038b7af[m HEAD@{41}: commit: pre-phase
+[33m5296761[m HEAD@{42}: commit: initial commit
+[33ma27db66[m HEAD@{43}: commit (initial): initial commit
