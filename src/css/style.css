@@ -3,45 +3,66 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
   scroll-behavior: smooth;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   font-family: "Raleway", sans-serif;
   color: white;
   font-weight: 400;
   background-image: url("../img/bg/warframe-min.png");
-  background-size: cover;
-}
+  background-size: cover; }
 
 .gridContainer {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-}
+  grid-template-columns: 20% 20% 20% 20% 20%; }
 
 .inventoryBar {
+  position: relative;
   display: none;
   overflow: auto;
   height: 94vh;
   padding: 50px;
-  padding-top: 500px;
-}
-.inventoryBarContainer {
-  grid-column: 2 / 6;
-}
+  padding-top: 300px; }
+  .inventoryBar::-webkit-scrollbar {
+    display: none; }
+  .inventoryBarContainer {
+    grid-column: 2 / 6;
+    margin: 50px 30px 0 30px;
+    background-image: linear-gradient(to top, #17131c, rgba(120, 102, 148, 0)); }
 
 .inventoryHeading {
   grid-column: 1 / -1;
-}
+  position: relative;
+  height: 100%; }
+  .inventoryHeading h1 {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 3.5rem; }
+
+.inventoryItems {
+  margin: 0 auto;
+  margin-top: 50px;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: repeat(4, 200px);
+  justify-items: stretch;
+  align-items: stretch;
+  gap: 20px; }
+
+.inventoryIcon {
+  display: inline-block;
+  width: 200px;
+  height: auto; }
+
+.itemContainer {
+  border: 5px solid #3a2f28; }
 
 .activeTab {
-  display: block;
-}
+  display: grid; }
 
 header {
   grid-column: 1 / -1;
@@ -49,40 +70,32 @@ header {
   grid-template-rows: 6vh 94vh;
   justify-items: stretch;
   align-items: stretch;
-  overflow: hidden;
-}
-header nav {
-  grid-column: 1 / -1;
-  background-color: #2f283a;
-}
-header nav .logo {
-  height: 20px;
-  width: 20px;
-}
-header .sideBar {
-  grid-row: 2 / 3;
-  background-color: rgba(19, 28, 23, 0.8);
-}
+  overflow: hidden; }
+  header nav {
+    grid-column: 1 / -1;
+    background-color: #2f283a; }
+    header nav .logo {
+      height: 20px;
+      width: 20px; }
+  header .sideBar {
+    grid-row: 2 / 3;
+    background-color: rgba(19, 28, 23, 0.8); }
 
 .gameLabel {
   height: 30px;
   width: 350px;
   margin: 3px auto;
-  background-color: #261f1a;
-}
-.gameLabel span {
-  display: inline-block;
-  width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.gameLabel:hover {
-  cursor: pointer;
-}
-.gameLabelContainer {
-  height: 100%;
-}
+  background-color: #261f1a; }
+  .gameLabel span {
+    display: inline-block;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .gameLabel:hover {
+    cursor: pointer; }
+  .gameLabelContainer {
+    height: 100%; }
 
 .gameIcon {
   position: relative;
@@ -91,5 +104,4 @@ header .sideBar {
   top: 50%;
   left: 2.5%;
   margin-right: 15px;
-  transform: translate(0, -50%);
-}
+  transform: translate(0, -50%); }
