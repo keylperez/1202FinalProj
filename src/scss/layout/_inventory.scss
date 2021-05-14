@@ -6,6 +6,7 @@
     height: 94vh;
     padding: 50px;
     padding-top: 300px;
+    margin: 0 30px 0 30px;
 
     &::-webkit-scrollbar {
       display: none;
@@ -13,12 +14,34 @@
 
     &Container {
       grid-column: 2 / 6;
-      margin: 50px 30px 0 30px;
       background-image: linear-gradient(
         to top,
         rgba($primary-color-dark, 1),
         rgba($primary-color-light, 0)
       );
+      &::before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 100px;
+        z-index: 1000;
+        background: linear-gradient(
+          $primary-color-dark,
+          rgba($secondary-color, 0.001)
+        ); /* transparent keyword is broken in Safari */
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        // z-index: 1000;
+        height: 100px;
+        background: linear-gradient(
+          rgba($secondary-color, 0.001),
+          rgba($primary-color-dark, 1)
+        ); /* transparent keyword is broken in Safari */
+      }
     }
   }
 
@@ -55,6 +78,7 @@
 .item {
   &Container {
     border: 5px solid $tertiary-color;
+    background-color: $primary-color;
   }
 }
 

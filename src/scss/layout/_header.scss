@@ -23,7 +23,10 @@ header {
   height: 30px;
   width: 350px;
   margin: 3px auto;
-  background-color: $tertiary-color-dark;
+  background-color: $tertiary-color;
+  color: white;
+  outline: none;
+  border-radius: 2px;
   span {
     display: inline-block;
     width: 300px;
@@ -37,6 +40,20 @@ header {
   &Container {
     height: 100%;
   }
+}
+
+#searchBar {
+  height: 30px;
+  width: 350px;
+  margin: 3px auto;
+  background-color: $secondary-color;
+  color: white;
+  outline: none;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 340px;
+  padding: 5px;
 }
 
 .gameIcon {

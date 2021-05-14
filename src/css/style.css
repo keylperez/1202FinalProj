@@ -14,7 +14,8 @@ body {
   color: white;
   font-weight: 400;
   background-image: url("../img/bg/warframe-min.png");
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
 
 .gridContainer {
   display: grid;
@@ -26,13 +27,29 @@ body {
   overflow: auto;
   height: 94vh;
   padding: 50px;
-  padding-top: 300px; }
+  padding-top: 300px;
+  margin: 0 30px 0 30px; }
   .inventoryBar::-webkit-scrollbar {
     display: none; }
   .inventoryBarContainer {
     grid-column: 2 / 6;
-    margin: 50px 30px 0 30px;
     background-image: linear-gradient(to top, #17131c, rgba(120, 102, 148, 0)); }
+    .inventoryBarContainer::before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 100px;
+      z-index: 1000;
+      background: linear-gradient(#17131c, rgba(40, 58, 47, 0.001));
+      /* transparent keyword is broken in Safari */ }
+    .inventoryBarContainer::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(rgba(40, 58, 47, 0.001), #17131c);
+      /* transparent keyword is broken in Safari */ }
 
 .inventoryHeading {
   grid-column: 1 / -1;
@@ -59,7 +76,8 @@ body {
   height: auto; }
 
 .itemContainer {
-  border: 5px solid #3a2f28; }
+  border: 5px solid #3a2f28;
+  background-color: #2f283a; }
 
 .activeTab {
   display: grid; }
@@ -85,7 +103,10 @@ header {
   height: 30px;
   width: 350px;
   margin: 3px auto;
-  background-color: #261f1a; }
+  background-color: #3a2f28;
+  color: white;
+  outline: none;
+  border-radius: 2px; }
   .gameLabel span {
     display: inline-block;
     width: 300px;
@@ -96,6 +117,19 @@ header {
     cursor: pointer; }
   .gameLabelContainer {
     height: 100%; }
+
+#searchBar {
+  height: 30px;
+  width: 350px;
+  margin: 3px auto;
+  background-color: #283a2f;
+  color: white;
+  outline: none;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 340px;
+  padding: 5px; }
 
 .gameIcon {
   position: relative;
