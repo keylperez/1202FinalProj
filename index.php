@@ -15,16 +15,25 @@
         <nav class="gridContainer">
             <img src="" alt="logo" class="logo">
             <div id="overlay">
-                <div class="loginContainer">
+                <?php if (isset($_GET['confirmed'])) { ?>
+                    <script>
+                        document.getElementById("overlay").style.display = "none";
+                    </script>
+                <?php } ?>
+                <form action="thePhp.php" method="post" class="loginContainer">
+                    
                     <div class="login">
                         <h2>Login</h2>
-                        <p>Username: </p>
-                        <input type="text" name="email"><br>
-                        <p>Password: </p>
-                        <input type="password" name="pass"><br>
-                        <button onclick="disableLoginContainer('1')">Login</button>
+                        <?php if (isset($_GET['error'])) { ?>
+                        <p class="error"><?php echo $_GET['error']; ?></p>
+                        <?php } ?>
+                        <label>Username: </label>
+                        <input type="text" name="username" placeholder="Username"><br>
+                        <label>Password: </label>
+                        <input type="password" name="password" placeholder="Password"><br>
+                        <button type="submit">Login</button>
                     </div>
-                </div>
+                </form>
                 
             </div>
             
