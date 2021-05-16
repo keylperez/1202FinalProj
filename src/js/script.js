@@ -3,6 +3,9 @@
 const gameLabelContainer = document.querySelector(".gameLabelContainer");
 const body = document.body;
 
+function disableLoginContainer(tabnum){
+    document.getElementById("overlay").style.display = "none";
+}
 
 gameLabelContainer.addEventListener("click", function (e){ /*for the displaying of the game items*/
 
@@ -62,7 +65,4 @@ gameLabelContainer.addEventListener("click", function (e){ /*for the displaying 
     }
 });
 
-function disableLoginContainer(){
-    var overlay = document.getElementsByClassName(overlay);
-    overlay.className+="disable";
-}
+

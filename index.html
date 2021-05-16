@@ -14,17 +14,16 @@
     <header class="gridContainer">
         <nav class="gridContainer">
             <img src="" alt="logo" class="logo">
-            <div class="overlay">
+            <div id="overlay">
                 <div class="loginContainer">
-                    <form class="login">
+                    <div class="login">
                         <h2>Login</h2>
                         <p>Username: </p>
                         <input type="text" name="email"><br>
                         <p>Password: </p>
                         <input type="password" name="pass"><br>
-                        
-                    </form>
-                    <button onclick="disableLoginContainer()">Login</button>
+                        <button onclick="disableLoginContainer('1')">Login</button>
+                    </div>
                 </div>
                 
             </div>
