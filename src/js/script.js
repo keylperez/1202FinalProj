@@ -4,7 +4,7 @@ const gameLabelContainer = document.querySelector(".gameLabelContainer");
 const body = document.body;
 
 
-gameLabelContainer.addEventListener("click", function (e){
+gameLabelContainer.addEventListener("click", function (e){ /*for the displaying of the game items*/
 
     const selected = e.target.closest(".gameLabel");
     if (!selected) return;
@@ -61,3 +61,8 @@ gameLabelContainer.addEventListener("click", function (e){
             break;
     }
 });
+
+function disableLoginContainer(){
+    var overlay = document.getElementsByClassName(overlay);
+    overlay.className+="disable";
+}
