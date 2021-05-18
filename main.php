@@ -14,19 +14,7 @@
     <header class="gridContainer">
         <nav class="gridContainer">
             <img src="" alt="logo" class="logo">
-            <div id="overlay">
-                <div class="loginContainer">
-                    <div class="login">
-                        <h2>Login</h2>
-                        <p>Username: </p>
-                        <input type="text" name="email"><br>
-                        <p>Password: </p>
-                        <input type="password" name="pass"><br>
-                        <button onclick="disableLoginContainer('1')">Login</button>
-                    </div>
-                </div>
-                
-            </div>
+            
             
         </nav>
         <div class="sideBar">
