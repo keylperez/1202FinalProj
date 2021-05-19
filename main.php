@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["username"])){
+        header("Location: index.php");
+        exit();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +22,13 @@
     <header class="gridContainer">
         <nav class="gridContainer">
             <img src="" alt="logo" class="logo">
-            
+            <div>                   <!--design this-->
+                <img class="user_icon" src="src/img/icons/user_kris.gif" alt="icon">
+                <?php { ?>
+                    <p class="name"><?php echo $_SESSION['username']; ?></p>
+                <?php } ?>
+            </div>
+            <form action="src/php/signout_action.php"><button>Sign out</button></form>      <!--also this-->
             
         </nav>
         <div class="sideBar">
@@ -34,66 +48,10 @@
         </div>
         <div class="inventoryBarContainer">
             <div class="inventoryBar inventoryBar--1 gridContainer activeTab">
-                <div class="inventoryHeading"><img src="./src/img/icons/lotusIcon.png" alt="" class="inventoryIcon"><h1>Warframe</h1></div>
-                <div class="inventoryItems gridContainer">
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="" alt="" class="itemImg"></div>
-                </div>
-                <!--<?php include ("./src/php/warframe.php"); ?>-->
+                <?php include ("src/php/games/warframe.php"); ?>
             </div>
             <div class="inventoryBar inventoryBar--2 gridContainer">
-                <div class="inventoryHeading"><img src="./src/img/icons/40701a966e808488630312a181ccc8067719016b76c991ab4a51f87c3ee5f1bf200.png" alt="" class="inventoryIcon"><h1>Honkai Impacto</h1></div>
-                <div class="inventoryItems gridContainer">
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                </div>
-                <!--<?php include ("./src/php/honkaiImpact.php"); ?>-->
+                <?php include ("./src/php/games/honkaiImpact.php"); ?>
             </div>
             <div class="inventoryBar inventoryBar--3 gridContainer">
                 <div class="inventoryHeading"><img src="./src/img/icons/c1ecda477bc92b6ecfc533b64d4a0337.png" alt="" class="inventoryIcon"><h1>Dota</h1></div>
@@ -124,7 +82,7 @@
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                 </div>
-                <!--<?php include ("./src/php/dota.php"); ?>-->
+                <!--<?php include ("./src/php/games/dota.php"); ?>-->
             </div>
             <div class="inventoryBar inventoryBar--4 gridContainer">
                 <div class="inventoryHeading"><img src="./src/img/icons/db7221672fc6b447f7af2b1f61b140ef.png" alt="" class="inventoryIcon"><h1>Counter Strike: Global Offensive</h1></div>
@@ -155,38 +113,10 @@
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                 </div>
-                <!--<?php include ("./src/php/csgo.php"); ?>-->
+                <!--<?php include ("./src/php/games/csgo.php"); ?>-->
             </div>
             <div class="inventoryBar inventoryBar--5 gridContainer">
-                <div class="inventoryHeading"><img src="./src/img/icons/genshin-impact-mobile-240x240.png" alt="" class="inventoryIcon"><h1>Genshin Impact</h1></div>
-                <div class="inventoryItems gridContainer">
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                    <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
-                </div>
-                <!--<?php include ("./src/php/genshinImpact.php"); ?>-->
+                <?php include ("./src/php/games/genshinImpact.php"); ?>
             </div>
             <div class="inventoryBar inventoryBar--6 gridContainer">
                 <div class="inventoryHeading"><img src="./src/img/icons/SpDNFegxVRzXyUta0BFMdNqyLVmXGVcKHhyVsqYjOfg.png" alt="" class="inventoryIcon"><h1>Rocket League</h1></div>
@@ -217,7 +147,7 @@
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                 </div>
-                <!--<?php include ("./src/php/rocketLeague.php"); ?>-->
+                <!--<?php include ("./src/php/games/rocketLeague.php"); ?>-->
             </div>
             <div class="inventoryBar inventoryBar--7 gridContainer">
                 <div class="inventoryHeading"><img src="./src/img/icons/valorant-game-logo-icon-eps-10-gaming-streamer-vector-33193787.jpg" alt="" class="inventoryIcon"><h1>Valorant</h1></div>
@@ -248,7 +178,7 @@
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                 </div>
-                <!--<?php include ("./src/php/valorant.php"); ?>-->
+                <!--<?php include ("./src/php/games/valorant.php"); ?>-->
             </div>
             <div class="inventoryBar inventoryBar--8 gridContainer">
                 <div class="inventoryHeading"><img src="./src/img/icons/apex.jpg" alt="" class="inventoryIcon"><h1>Apex Legends</h1></div>
@@ -279,7 +209,7 @@
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                 </div>
-                <!--<?php include ("./src/php/apex.php"); ?>-->
+                <!--<?php include ("./src/php/games/apex.php"); ?>-->
             </div>
             <div class="inventoryBar inventoryBar--9 gridContainer">
                 <div class="inventoryHeading"><img src="./src/img/icons/tf2.png" alt="" class="inventoryIcon"><h1>Team Fortress 2</h1></div>
@@ -310,7 +240,7 @@
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                 </div>
-                <!--<?php include ("./src/php/teamFortress2.php"); ?>-->
+                <!--<?php include ("./src/php/games/teamFortress2.php"); ?>-->
             </div>
             <div class="inventoryBar inventoryBar--10 gridContainer">
                 <div class="inventoryHeading"><img src="./src/img/icons/pubg.jpg" alt="" class="inventoryIcon"><h1>PLAYERUNKOWN'S BATTLEGROUNDS</h1></div>
@@ -341,7 +271,7 @@
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                     <div class="itemContainer"><img src="./src/img/" alt="" class="itemImg"></div>
                 </div>
-                <!--<?php include ("./src/php/pubg.php"); ?>-->
+                <!--<?php include ("./src/php/games/pubg.php"); ?>-->
             </div>
         </div>
     </header>

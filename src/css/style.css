@@ -165,3 +165,27 @@ header {
         background: #fff;
         border-radius: 15px;
         color: #000; }
+      .loginPage .loginPos .loginContainer .loginInputs {
+        display: block;
+        border: 2px solid #ccc;
+        width: 95%;
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 5px; }
+
+.error {
+  background: #F2DEDE;
+  color: #A94442;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto; }
+
+.user_icon {
+  display: inline;
+  max-width: 45px;
+  border-radius: 100%;
+  margin: 5px; }
+
+.itemImg {
+  max-width: 200px; }
