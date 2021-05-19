@@ -63,8 +63,3 @@ gameLabelContainer.addEventListener("click", function (e){ /*for the displaying 
             break;
     }
 });
-<<<<<<< HEAD
-=======
-
-
->>>>>>> ayam1
