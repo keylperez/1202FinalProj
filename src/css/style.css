@@ -17,7 +17,11 @@ body {
   font-weight: 400;
   background-image: url("../img/bg/warframe-min.png");
   background-size: cover;
+<<<<<<< HEAD
 }
+=======
+  overflow: hidden; }
+>>>>>>> ayam1
 
 .gridContainer {
   display: grid;
@@ -25,10 +29,12 @@ body {
 }
 
 .inventoryBar {
+  position: relative;
   display: none;
   overflow: auto;
   height: 94vh;
   padding: 50px;
+<<<<<<< HEAD
   padding-top: 500px;
 }
 .inventoryBarContainer {
@@ -42,6 +48,62 @@ body {
 .activeTab {
   display: block;
 }
+=======
+  padding-top: 300px;
+  margin: 0 30px 0 30px; }
+  .inventoryBar::-webkit-scrollbar {
+    display: none; }
+  .inventoryBarContainer {
+    grid-column: 2 / 6;
+    background-image: linear-gradient(to top, #17131c, rgba(120, 102, 148, 0)); }
+    .inventoryBarContainer::before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 100px;
+      z-index: 1000;
+      background: linear-gradient(#17131c, rgba(40, 58, 47, 0.001));
+      /* transparent keyword is broken in Safari */ }
+    .inventoryBarContainer::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(rgba(40, 58, 47, 0.001), #17131c);
+      /* transparent keyword is broken in Safari */ }
+
+.inventoryHeading {
+  grid-column: 1 / -1;
+  position: relative;
+  height: 100%; }
+  .inventoryHeading h1 {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 3.5rem; }
+
+.inventoryItems {
+  margin: 0 auto;
+  margin-top: 50px;
+  grid-column: 1 / -1;
+  grid-template-columns: repeat(6, 200px);
+  grid-template-rows: repeat(4, 200px);
+  justify-items: stretch;
+  align-items: stretch;
+  gap: 20px; }
+
+.inventoryIcon {
+  display: inline-block;
+  width: 200px;
+  height: auto; }
+
+.itemContainer {
+  border: 5px solid #3a2f28;
+  background-color: #2f283a; }
+
+.activeTab {
+  display: grid; }
+>>>>>>> ayam1
 
 header {
   grid-column: 1 / -1;
@@ -68,6 +130,7 @@ header .sideBar {
   height: 30px;
   width: 350px;
   margin: 3px auto;
+<<<<<<< HEAD
   background-color: #261f1a;
 }
 .gameLabel span {
@@ -83,6 +146,35 @@ header .sideBar {
 .gameLabelContainer {
   height: 100%;
 }
+=======
+  background-color: #3a2f28;
+  color: white;
+  outline: none;
+  border-radius: 2px; }
+  .gameLabel span {
+    display: inline-block;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .gameLabel:hover {
+    cursor: pointer; }
+  .gameLabelContainer {
+    height: 100%; }
+>>>>>>> ayam1
+
+#searchBar {
+  height: 30px;
+  width: 350px;
+  margin: 3px auto;
+  background-color: #283a2f;
+  color: white;
+  outline: none;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 340px;
+  padding: 5px; }
 
 .gameIcon {
   position: relative;
@@ -91,5 +183,59 @@ header .sideBar {
   top: 50%;
   left: 2.5%;
   margin-right: 15px;
+<<<<<<< HEAD
   transform: translate(0, -50%);
 }
+=======
+  transform: translate(0, -50%); }
+
+.loginPage {
+  display: grid;
+  background-color: #000;
+  background-image: none; }
+  .loginPage .loginPos {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: black; }
+    .loginPage .loginPos .loginContainer {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center; }
+      .loginPage .loginPos .loginContainer .login {
+        width: 500px;
+        border: 2px solid #ccc;
+        padding: 30px;
+        background: #fff;
+        border-radius: 15px;
+        color: #000; }
+      .loginPage .loginPos .loginContainer .loginInputs {
+        display: block;
+        border: 2px solid #ccc;
+        width: 95%;
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 5px; }
+
+.error {
+  background: #F2DEDE;
+  color: #A94442;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto; }
+
+.user_icon {
+  display: inline;
+  max-width: 45px;
+  border-radius: 100%;
+  margin: 5px; }
+
+.itemImg {
+  max-width: 200px; }
+>>>>>>> ayam1
