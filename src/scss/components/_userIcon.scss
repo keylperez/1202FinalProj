@@ -1,0 +1,17 @@
+.navUserIcon {
+  grid-column: 5 / -1;
+  justify-self: stretch;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  .user_icon {
+    display: inline;
+    max-width: 45px;
+    border-radius: 100%;
+    margin: 5px;
+  }
+  .signOutBT {
+    justify-self: center;
+    align-self: center;
+    margin-left: 10px;
+  }
+}

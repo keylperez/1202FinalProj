@@ -1,57 +1,46 @@
 .loginPage {
-    display: grid;
-    background-color: #000;
-    background-image: none; 
-    .loginPos {
-        height: 100%;
-        width: 100%;
+  display: grid;
+  background-color: #000;
+  background-image: none;
+  .loginPos {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: black;
+    .loginContainer {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      .login {
+        width: 500px;
+        border: 2px solid #ccc;
+        padding: 30px;
+        background: #fff;
+        border-radius: 15px;
+        color: #000;
+      }
+      .loginInputs {
         display: block;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background: black; 
-        .loginContainer {
-            display: flex;
-            height: 100%;
-            justify-content: center;
-            align-items: center; 
-            .login {
-                width: 500px;
-                border: 2px solid #ccc;
-                padding: 30px;
-                background: #fff;
-                border-radius: 15px;
-                color: #000; 
-            }
-            .loginInputs{
-                display: block;
-                border: 2px solid #ccc;
-                width: 95%;
-                padding: 10px;
-                margin: 10px auto;
-                border-radius: 5px;
-            }
-        }
+        border: 2px solid #ccc;
+        width: 95%;
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 5px;
+      }
     }
+  }
 }
 
 .error {
-    background: #F2DEDE;
-    color: #A94442;
-    padding: 10px;
-    width: 95%;
-    border-radius: 5px;
-    margin: 20px auto;
-}
-
-.user_icon{
-    display: inline;
-    max-width: 45px;
-    border-radius: 100%;
-    margin: 5px;
-}
-
-.itemImg{
-    max-width: 200px;
+  background: #f2dede;
+  color: #a94442;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
 }
