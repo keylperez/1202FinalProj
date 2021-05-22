@@ -80,6 +80,15 @@
     border: 5px solid $tertiary-color;
     background-color: $primary-color;
   }
+  &Img {
+    max-width: 200px;
+  }
+}
+
+.name {
+  margin-left: 0px;
+  justify-self: center;
+  align-self: center;
 }
 
 .activeTab {
