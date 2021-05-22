@@ -1,0 +1,52 @@
+.loginPage {
+  display: grid;
+  // background-color: #000;
+  background-image: url("../img/bg/allGameBg.jpg");
+  .loginPos {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    // background: black;
+    .loginContainer {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      .login {
+        width: 500px;
+        border: 2px solid #ccc;
+        border-radius: 15px;
+        padding: 30px;
+        background: $tertiary-color-light;
+        color: $primary-color-dark;
+        grid-template-columns: 100%;
+        gap: 10px;
+      }
+      button {
+        @extend %buttons;
+        justify-self: end;
+        background-color: $primary-color-light;
+      }
+      .loginInputs {
+        display: block;
+        border: 2px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        background: $primary-color-light;
+      }
+    }
+  }
+}
+
+.error {
+  background: #f2dede;
+  color: #a94442;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  margin: 20px auto;
+}
