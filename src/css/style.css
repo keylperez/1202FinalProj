@@ -1,38 +1,31 @@
-.loginPage .loginPos .loginContainer button {
+.loginPage button {
   border: none;
   padding: 10px;
   border-radius: 100px;
   cursor: pointer;
   width: 150px;
-  height: 50px;
-}
+  height: 50px; }
 
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 html {
   scroll-behavior: smooth;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body {
   font-family: "Raleway", sans-serif;
   color: white;
   font-weight: 400;
-  background-image: url("../img/bg/warframe-min.png");
-  background-size: cover;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .gridContainer {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-}
+  grid-template-columns: 20% 20% 20% 20% 20%; }
 
 .inventoryBar {
   position: relative;
@@ -41,44 +34,37 @@ body {
   height: 94vh;
   padding: 50px;
   padding-top: 300px;
-  margin: 0 30px 0 30px;
-}
-.inventoryBar::-webkit-scrollbar {
-  display: none;
-}
-.inventoryBarContainer {
-  grid-column: 2 / 6;
-  background-image: linear-gradient(to top, #17131c, rgba(120, 102, 148, 0));
-}
-.inventoryBarContainer::before {
-  content: "";
-  width: 100%;
-  position: absolute;
-  height: 100px;
-  z-index: 1000;
-  background: linear-gradient(#17131c, rgba(40, 58, 47, 0.001));
-  /* transparent keyword is broken in Safari */
-}
-.inventoryBarContainer::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(rgba(40, 58, 47, 0.001), #17131c);
-  /* transparent keyword is broken in Safari */
-}
+  margin: 0 30px 0 30px; }
+  .inventoryBar::-webkit-scrollbar {
+    display: none; }
+  .inventoryBarContainer {
+    grid-column: 2 / 6;
+    background-image: linear-gradient(to top, #17131c, rgba(120, 102, 148, 0)); }
+    .inventoryBarContainer::before {
+      content: "";
+      width: 100%;
+      position: absolute;
+      height: 100px;
+      z-index: 1000;
+      background: linear-gradient(#17131c, rgba(40, 58, 47, 0.001));
+      /* transparent keyword is broken in Safari */ }
+    .inventoryBarContainer::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(rgba(40, 58, 47, 0.001), #17131c);
+      /* transparent keyword is broken in Safari */ }
 
 .inventoryHeading {
   grid-column: 1 / -1;
   position: relative;
-  height: 100%;
-}
-.inventoryHeading h1 {
-  display: inline-block;
-  margin-left: 50px;
-  font-size: 3.5rem;
-}
+  height: 100%; }
+  .inventoryHeading h1 {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 3.5rem; }
 
 .inventoryItems {
   margin: 0 auto;
@@ -88,33 +74,27 @@ body {
   grid-template-rows: repeat(4, 200px);
   justify-items: stretch;
   align-items: stretch;
-  gap: 20px;
-}
+  gap: 20px; }
 
 .inventoryIcon {
   display: inline-block;
   width: 200px;
-  height: auto;
-}
+  height: auto; }
 
 .itemContainer {
   border: 5px solid #3a2f28;
-  background-color: #2f283a;
-}
+  background-color: #2f283a; }
 
 .itemImg {
-  max-width: 200px;
-}
+  max-width: 200px; }
 
 .name {
   margin-left: 0px;
   justify-self: center;
-  align-self: center;
-}
+  align-self: center; }
 
 .activeTab {
-  display: grid;
-}
+  display: grid; }
 
 header {
   grid-column: 1 / -1;
@@ -122,20 +102,16 @@ header {
   grid-template-rows: 6vh 94vh;
   justify-items: stretch;
   align-items: stretch;
-  overflow: hidden;
-}
-header nav {
-  grid-column: 1 / -1;
-  background-color: #2f283a;
-}
-header nav .logo {
-  height: 20px;
-  width: 20px;
-}
-header .sideBar {
-  grid-row: 2 / 3;
-  background-color: rgba(19, 28, 23, 0.8);
-}
+  overflow: hidden; }
+  header nav {
+    grid-column: 1 / -1;
+    background-color: #2f283a; }
+    header nav .logo {
+      height: 20px;
+      width: 20px; }
+  header .sideBar {
+    grid-row: 2 / 3;
+    background-color: rgba(19, 28, 23, 0.8); }
 
 .gameLabel {
   height: 30px;
@@ -144,21 +120,17 @@ header .sideBar {
   background-color: #3a2f28;
   color: white;
   outline: none;
-  border-radius: 2px;
-}
-.gameLabel span {
-  display: inline-block;
-  width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.gameLabel:hover {
-  cursor: pointer;
-}
-.gameLabelContainer {
-  height: 100%;
-}
+  border-radius: 2px; }
+  .gameLabel span {
+    display: inline-block;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .gameLabel:hover {
+    cursor: pointer; }
+  .gameLabelContainer {
+    height: 100%; }
 
 #searchBar {
   height: 30px;
@@ -171,8 +143,7 @@ header .sideBar {
   margin-left: 20px;
   margin-top: 20px;
   width: 340px;
-  padding: 5px;
-}
+  padding: 5px; }
 
 .gameIcon {
   position: relative;
@@ -181,67 +152,88 @@ header .sideBar {
   top: 50%;
   left: 2.5%;
   margin-right: 15px;
-  transform: translate(0, -50%);
-}
+  transform: translate(0, -50%); }
 
 .navUserIcon {
   grid-column: 5 / -1;
   justify-self: stretch;
   display: grid;
-  grid-template-columns: 50% 25% 25%;
-}
-.navUserIcon .user_icon {
-  display: inline;
-  max-width: 45px;
-  border-radius: 100%;
-  margin: 5px;
-}
-.navUserIcon .signOutBT {
-  justify-self: center;
-  align-self: center;
-  margin-left: 10px;
-}
+  grid-template-columns: 50% 25% 25%; }
+  .navUserIcon .user_icon {
+    display: inline;
+    max-width: 45px;
+    border-radius: 100%;
+    margin: 5px; }
+  .navUserIcon .signOutBT {
+    justify-self: center;
+    align-self: center;
+    margin-left: 10px; }
+
+.mainBody {
+  background-image: url("../img/bg/warframe-min.png");
+  background-size: cover; }
 
 .loginPage {
-  display: grid;
-  background-image: url("../img/bg/allGameBg.jpg");
-}
-.loginPage .loginPos {
-  height: 100%;
-  width: 100%;
-  display: block;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
-.loginPage .loginPos .loginContainer {
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.loginPage .loginPos .loginContainer .login {
-  width: 500px;
-  border: 2px solid #ccc;
-  border-radius: 15px;
-  padding: 30px;
-  background: #a38a7a;
-  color: #17131c;
-  grid-template-columns: 100%;
-  gap: 10px;
-}
-.loginPage .loginPos .loginContainer button {
-  justify-self: end;
-  background-color: #786694;
-}
-.loginPage .loginPos .loginContainer .loginInputs {
-  display: block;
-  border: 2px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  background: #786694;
-}
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/bg/allGameBg.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg/allGameBg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg/allGameBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto; }
+  .loginPage .loginContainer {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%); }
+  .loginPage .login {
+    width: 500px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 30px;
+    background: #a38a7a;
+    color: #17131c;
+    grid-template-columns: 100%;
+    gap: 10px; }
+  .loginPage button {
+    justify-self: end;
+    background-color: #786694; }
+  .loginPage .loginInputs {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background: #ccc; }
+  .loginPage .footer {
+    position: fixed;
+    bottom: 0;
+    background-color: #17131c;
+    width: 100%;
+    height: 80px;
+    font-size: 1rem;
+    padding: 20px; }
+    .loginPage .footer a {
+      text-decoration: none;
+      margin: 0 auto; }
+      .loginPage .footer a span {
+        vertical-align: middle; }
+    .loginPage .footer .icon {
+      width: 30px;
+      height: 30px;
+      fill: #709c81; }
+      .loginPage .footer .icon:hover {
+        transform: scale(1.2); }
+      .loginPage .footer .icon-facebook:hover {
+        fill: #1877f2; }
+      .loginPage .footer .icon-instagram:hover {
+        fill: #e4405f; }
+      .loginPage .footer .icon-twitter:hover {
+        fill: #1da1f2; }
+      .loginPage .footer .icon-discord:hover {
+        fill: #7289da; }
+      .loginPage .footer .icon-github:hover {
+        fill: #444444; }
+
+.socialMedia {
+  grid-column: 1 / 3; }
 
 .error {
   background: #f2dede;
@@ -249,16 +241,4 @@ header .sideBar {
   padding: 10px;
   width: 95%;
   border-radius: 5px;
-  margin: 20px auto;
-}
-
-.user_icon {
-  display: inline;
-  max-width: 45px;
-  border-radius: 100%;
-  margin: 5px;
-}
-
-.itemImg {
-  max-width: 200px;
-}
+  margin: 20px auto; }

@@ -20,7 +20,7 @@ if (!isset($_SESSION["username"])) {
     <script defer src="./src/js/script.js"></script>
 </head>
 
-<body class="gridContainer">
+<body class="mainBody gridContainer">
     <header class="gridContainer">
         <nav class="gridContainer">
             <img src="" alt="logo" class="logo">

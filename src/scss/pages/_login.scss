@@ -1,45 +1,90 @@
 .loginPage {
-  display: grid;
-  // background-color: #000;
-  background-image: url("../img/bg/allGameBg.jpg");
-  .loginPos {
-    height: 100%;
-    width: 100%;
-    display: block;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.5)),
+      to(rgba(0, 0, 0, 0.5))
+    ),
+    url("../img/bg/allGameBg.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/bg/allGameBg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/bg/allGameBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-y: auto;
+  .loginContainer {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%);
+  }
+  .login {
+    width: 500px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 30px;
+    background: $tertiary-color-light;
+    color: $primary-color-dark;
+    grid-template-columns: 100%;
+    gap: 10px;
+  }
+  button {
+    @extend %buttons;
+    justify-self: end;
+    background-color: $primary-color-light;
+  }
+  .loginInputs {
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background: #ccc;
+  }
+  .footer {
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    // background: black;
-    .loginContainer {
-      display: flex;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      .login {
-        width: 500px;
-        border: 2px solid #ccc;
-        border-radius: 15px;
-        padding: 30px;
-        background: $tertiary-color-light;
-        color: $primary-color-dark;
-        grid-template-columns: 100%;
-        gap: 10px;
+    bottom: 0;
+    background-color: $primary-color-dark;
+    width: 100%;
+    height: 80px;
+    font-size: 1rem;
+    padding: 20px;
+    a {
+      text-decoration: none;
+      margin: 0 auto;
+      span {
+        vertical-align: middle;
       }
-      button {
-        @extend %buttons;
-        justify-self: end;
-        background-color: $primary-color-light;
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      fill: $secondary-color-light;
+      &:hover {
+        transform: scale(1.2);
       }
-      .loginInputs {
-        display: block;
-        border: 2px solid #ccc;
-        padding: 10px;
-        border-radius: 5px;
-        background: $primary-color-light;
+      &-facebook:hover {
+        fill: #1877f2;
+      }
+      &-instagram:hover {
+        fill: #e4405f;
+      }
+      &-twitter:hover {
+        fill: #1da1f2;
+      }
+      &-discord:hover {
+        fill: #7289da;
+      }
+      &-github:hover {
+        fill: #444444;
       }
     }
   }
+}
+
+.socialMedia {
+  grid-column: 1 / 3;
 }
 
 .error {
