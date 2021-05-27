@@ -1,11 +1,3 @@
-.loginPage button {
-  border: none;
-  padding: 10px;
-  border-radius: 100px;
-  cursor: pointer;
-  width: 150px;
-  height: 50px; }
-
 *,
 *::after,
 *::before {
@@ -45,7 +37,7 @@ body {
       width: 100%;
       position: absolute;
       height: 100px;
-      z-index: 1000;
+      z-index: 1;
       background: linear-gradient(#17131c, rgba(40, 58, 47, 0.001));
       /* transparent keyword is broken in Safari */ }
     .inventoryBarContainer::after {
@@ -60,18 +52,20 @@ body {
 .inventoryHeading {
   grid-column: 1 / -1;
   position: relative;
-  height: 100%; }
+  height: 100%;
+  width: 1000px;
+  margin: 0 auto; }
   .inventoryHeading h1 {
-    display: inline-block;
+    display: inline;
     margin-left: 50px;
-    font-size: 3.5rem; }
+    font-size: 2.8rem; }
 
 .inventoryItems {
   margin: 0 auto;
   margin-top: 50px;
   grid-column: 1 / -1;
-  grid-template-columns: repeat(6, 200px);
-  grid-template-rows: repeat(4, 200px);
+  grid-template-columns: repeat(6, 150px);
+  grid-template-rows: repeat(4, 150px);
   justify-items: stretch;
   align-items: stretch;
   gap: 20px; }
@@ -79,14 +73,24 @@ body {
 .inventoryIcon {
   display: inline-block;
   width: 200px;
-  height: auto; }
+  height: auto;
+  border: 3px solid #3a2f28;
+  border-radius: 20%; }
 
 .itemContainer {
   border: 5px solid #3a2f28;
   background-color: #2f283a; }
 
 .itemImg {
-  max-width: 200px; }
+  position: relative;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%);
+  width: 130px;
+  margin: 0 auto; }
+
+.itemQuantity {
+  margin-left: 5px; }
 
 .name {
   margin-left: 0px;
@@ -96,82 +100,143 @@ body {
 .activeTab {
   display: grid; }
 
-header {
-  grid-column: 1 / -1;
-  height: 100vh;
-  grid-template-rows: 6vh 94vh;
-  justify-items: stretch;
-  align-items: stretch;
-  overflow: hidden; }
-  header nav {
-    grid-column: 1 / -1;
-    background-color: #2f283a; }
-    header nav .logo {
-      height: 20px;
-      width: 20px; }
-  header .sideBar {
-    grid-row: 2 / 3;
-    background-color: rgba(19, 28, 23, 0.8); }
-
-.gameLabel {
-  height: 30px;
-  width: 350px;
-  margin: 3px auto;
-  background-color: #3a2f28;
-  color: white;
-  outline: none;
-  border-radius: 2px; }
-  .gameLabel span {
-    display: inline-block;
-    width: 300px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; }
-  .gameLabel:hover {
-    cursor: pointer; }
-  .gameLabelContainer {
-    height: 100%; }
-
-#searchBar {
-  height: 30px;
-  width: 350px;
-  margin: 3px auto;
-  background-color: #283a2f;
-  color: white;
-  outline: none;
-  border-radius: 10px;
-  margin-left: 20px;
-  margin-top: 20px;
-  width: 340px;
-  padding: 5px; }
-
-.gameIcon {
-  position: relative;
-  height: 25px;
-  width: 25px;
-  top: 50%;
-  left: 2.5%;
-  margin-right: 15px;
-  transform: translate(0, -50%); }
-
 .navUserIcon {
   grid-column: 5 / -1;
   justify-self: stretch;
-  display: grid;
-  grid-template-columns: 50% 25% 25%; }
-  .navUserIcon .user_icon {
-    display: inline;
-    max-width: 45px;
-    border-radius: 100%;
-    margin: 5px; }
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  padding: 0 30px; }
+  .navUserIcon label {
+    position: relative;
+    display: inline-block; }
+    .navUserIcon label .dropDown {
+      display: none;
+      position: absolute;
+      height: 200px;
+      background-color: #2f283a;
+      color: white;
+      border: 2px solid #786694;
+      border-radius: 10px; }
+      .navUserIcon label .dropDown a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 0;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 0.9rem; }
+        .navUserIcon label .dropDown a .icon {
+          margin: 2px;
+          float: left; }
+        .navUserIcon label .dropDown a span {
+          margin: auto 0; }
+        .navUserIcon label .dropDown a:first-child {
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px; }
+        .navUserIcon label .dropDown a:last-child {
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px; }
+        .navUserIcon label .dropDown a:hover {
+          background-color: rgba(0, 0, 0, 0.3); }
+    .navUserIcon label input[type="checkbox"] {
+      display: none; }
+      .navUserIcon label input[type="checkbox"]:checked ~ .dropDown {
+        display: grid;
+        justify-items: stretch;
+        align-items: stretch;
+        left: -20%;
+        z-index: 2;
+        animation: pulse 0.3s;
+        grid-template-columns: 150px;
+        grid-template-rows: 40px; }
+    .navUserIcon label .user_icon {
+      height: 35px;
+      width: auto;
+      border-radius: 100%;
+      margin: 5px;
+      cursor: pointer;
+      justify-self: end;
+      transition: 0.3s; }
+      .navUserIcon label .user_icon:hover {
+        transform: scale(1.2); }
   .navUserIcon .signOutBT {
-    justify-self: center;
+    justify-self: start;
     align-self: center;
     margin-left: 10px; }
+    .navUserIcon .signOutBT button {
+      border-radius: 80px;
+      cursor: pointer;
+      background-color: #3a2f28;
+      color: white;
+      height: 25px;
+      width: 60px;
+      font-size: 0.7rem;
+      border: 2px solid #709c81;
+      transition: 0.3s; }
+      .navUserIcon .signOutBT button:hover {
+        border-color: #3a2f28;
+        background-color: #709c81;
+        color: black; }
 
 .mainBody {
   background-image: url("../img/bg/warframe-min.png");
   background-size: cover; }
+  .mainBody header {
+    grid-column: 1 / -1;
+    height: 100vh;
+    justify-items: stretch;
+    align-items: stretch;
+    overflow: hidden; }
+    .mainBody header nav {
+      height: 60px;
+      grid-column: 1 / -1;
+      background-color: #2f283a; }
+      .mainBody header nav .logo {
+        height: 20px;
+        width: 20px; }
+    .mainBody header .sideBar {
+      grid-row: 2 / 3;
+      background-color: rgba(19, 28, 23, 0.8); }
+  .mainBody .gameLabel {
+    height: 30px;
+    width: 90%;
+    margin: 3px auto;
+    background-color: #3a2f28;
+    color: white;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.1s; }
+    .mainBody .gameLabel span {
+      display: inline-block;
+      width: 225px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 0.9rem; }
+    .mainBody .gameLabel:hover {
+      cursor: pointer;
+      transform: scale(1.05); }
+    .mainBody .gameLabelContainer {
+      height: 100%; }
+  .mainBody #searchBar {
+    height: 30px;
+    width: 350px;
+    margin: 3px auto;
+    background-color: #283a2f;
+    color: white;
+    outline: none;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 340px;
+    padding: 5px; }
+  .mainBody .gameIcon {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    top: 50%;
+    left: 2.5%;
+    margin-right: 15px;
+    transform: translate(0, -50%); }
 
 .loginPage {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/bg/allGameBg.jpg");
@@ -187,21 +252,41 @@ header {
     transform: translate(-50%); }
   .loginPage .login {
     width: 500px;
-    border: 2px solid #ccc;
+    border: 2px solid #a38a7a;
     border-radius: 15px;
     padding: 30px;
-    background: #a38a7a;
+    background-image: url("../img/bg/48356144_1928080907246342_5804713124485398528_n.png");
     color: #17131c;
     grid-template-columns: 100%;
     gap: 10px; }
   .loginPage button {
+    border-radius: 80px;
+    cursor: pointer;
     justify-self: end;
-    background-color: #786694; }
+    background-color: #709c81;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #a38a7a;
+    transition: 0.3s; }
+    .loginPage button:hover {
+      border-color: #709c81;
+      background-color: #a38a7a; }
   .loginPage .loginInputs {
-    border: 2px solid #ccc;
-    padding: 10px;
+    border: 2px solid white;
+    padding: 5px;
     border-radius: 5px;
-    background: #ccc; }
+    background: white;
+    grid-template-columns: 10% 90%; }
+    .loginPage .loginInputs .icon {
+      fill: #709c81;
+      justify-self: start; }
+    .loginPage .loginInputs input {
+      position: relative;
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+      outline: none;
+      height: 100%;
+      width: 90%; }
   .loginPage .footer {
     position: fixed;
     bottom: 0;
@@ -215,22 +300,26 @@ header {
       margin: 0 auto; }
       .loginPage .footer a span {
         vertical-align: middle; }
-    .loginPage .footer .icon {
-      width: 30px;
-      height: 30px;
-      fill: #709c81; }
-      .loginPage .footer .icon:hover {
-        transform: scale(1.2); }
-      .loginPage .footer .icon-facebook:hover {
-        fill: #1877f2; }
-      .loginPage .footer .icon-instagram:hover {
-        fill: #e4405f; }
-      .loginPage .footer .icon-twitter:hover {
-        fill: #1da1f2; }
-      .loginPage .footer .icon-discord:hover {
-        fill: #7289da; }
-      .loginPage .footer .icon-github:hover {
-        fill: #444444; }
+
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: #709c81; }
+  .icon-facebook:hover {
+    fill: #1877f2;
+    transform: scale(1.2); }
+  .icon-instagram:hover {
+    fill: #e4405f;
+    transform: scale(1.2); }
+  .icon-twitter:hover {
+    fill: #1da1f2;
+    transform: scale(1.2); }
+  .icon-discord:hover {
+    fill: #7289da;
+    transform: scale(1.2); }
+  .icon-github:hover {
+    fill: #444444;
+    transform: scale(1.2); }
 
 .socialMedia {
   grid-column: 1 / 3; }

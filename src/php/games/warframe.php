@@ -27,5 +27,4 @@
         <div class="itemContainer"><img src="./src/img/items/warframeItems/" alt="" class="itemImg"><span class="itemQuantity"></span> <span class="itemName"></span></div>
         <div class="itemContainer"><img src="./src/img/items/warframeItems/" alt="" class="itemImg"><span class="itemQuantity"></span> <span class="itemName"></span></div>
         <div class="itemContainer"><img src="./src/img/items/warframeItems/" alt="" class="itemImg"><span class="itemQuantity"></span> <span class="itemName"></span></div>
-        <div class="itemContainer"><img src="./src/img/items/warframeItems/" alt="" class="itemImg"><span class="itemQuantity"></span> <span class="itemName"></span></div>
     </div>

@@ -24,7 +24,7 @@
         width: 100%;
         position: absolute;
         height: 100px;
-        z-index: 1000;
+        z-index: 1;
         background: linear-gradient(
           $primary-color-dark,
           rgba($secondary-color, 0.001)
@@ -49,11 +49,12 @@
     grid-column: 1 / -1;
     position: relative;
     height: 100%;
-
+    width: 1000px;
+    margin: 0 auto;
     h1 {
-      display: inline-block;
+      display: inline;
       margin-left: 50px;
-      font-size: 3.5rem;
+      font-size: 2.8rem;
     }
   }
 
@@ -61,8 +62,8 @@
     margin: 0 auto;
     margin-top: 50px;
     grid-column: 1 / -1;
-    grid-template-columns: repeat(6, 200px);
-    grid-template-rows: repeat(4, 200px);
+    grid-template-columns: repeat(6, 150px);
+    grid-template-rows: repeat(4, 150px);
     justify-items: stretch;
     align-items: stretch;
     gap: 20px;
@@ -72,6 +73,8 @@
     display: inline-block;
     width: 200px;
     height: auto;
+    border: 3px solid $tertiary-color;
+    border-radius: 20%;
   }
 }
 
@@ -81,7 +84,15 @@
     background-color: $primary-color;
   }
   &Img {
-    max-width: 200px;
+    position: relative;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+    width: 130px;
+    margin: 0 auto;
+  }
+  &Quantity {
+    margin-left: 5px;
   }
 }
 

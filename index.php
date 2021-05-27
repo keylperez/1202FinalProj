@@ -27,9 +27,19 @@ if (isset($_SESSION["username"])) {
                 <p class="error"><?php echo $_GET['error']; ?></p>
             <?php } ?>
             <label style="margin-top: 10px;">Username: </label>
-            <input class="loginInputs" type="text" name="username" placeholder="Username">
+            <div class="loginInputs gridContainer">
+                <svg class="icon icon-user">
+                    <use xlink:href="./src/sprite.svg#icon-user"></use>
+                </svg>
+                <input type="text" name="username" placeholder="Username">
+            </div>
             <label style="margin-top: 10px;">Password: </label>
-            <input class="loginInputs" type="password" name="password" placeholder="Password">
+            <div class="loginInputs gridContainer">
+                <svg class="icon icon-key">
+                    <use xlink:href="./src/sprite.svg#icon-key"></use>
+                </svg>
+                <input type="password" name="password" placeholder="Password">
+            </div>
             <button type="submit" style="margin-top: 10px;">Login</button>
             <div>
                 <p>No Account? <a href="sign_up.php">Sign Up here</a></p>
@@ -37,40 +47,7 @@ if (isset($_SESSION["username"])) {
         </div>
     </form>
     <div class="spaceContainer"></div>
-    <footer class="footer gridContainer">
-        <div class="socialMedia">
-            <a href="https://www.facebook.com/THEkeylperez/" class="link" target="_blank" rel="nonopener noreferrer">
-                <svg class="icon icon-facebook">
-                    <use xlink:href="./src/sprite.svg#icon-facebook-official"></use>
-                </svg>
-            </a>
-            <a href="https://www.instagram.com/keyl_perez/" class="link" target="_blank" rel="nonopener noreferrer">
-                <svg class="icon icon-instagram">
-                    <use xlink:href="./src/sprite.svg#icon-instagram"></use>
-                </svg>
-            </a>
-            <a href="https://twitter.com/keyl_perez" class="link" target="_blank" rel="nonopener noreferrer">
-                <svg class="icon icon-twitter">
-                    <use xlink:href="./src/sprite.svg#icon-twitter"></use>
-                </svg>
-            </a>
-            <a href="https://discord.gg/6EJYv5Y" class="link" target="_blank" rel="nonopener noreferrer">
-                <svg class="icon icon-discord">
-                    <use xlink:href="./src/sprite.svg#icon-discord"></use>
-                </svg>
-            </a>
-            <a href="https://github.com/keylperez" class="link" target="_blank" rel="nonopener noreferrer">
-                <svg class="icon icon-github">
-                    <use xlink:href="./src/sprite.svg#icon-github"></use>
-                </svg>
-            </a>
-        </div>
-        <div class="details">
-            <a href="" class="footerLink"><span>About Us </span></a>
-            <a href="" class="footerLink"><span>Support Us </span></a>
-            <a href="" class="footerLink"><span>Contact Us </span> </a>
-        </div>
-    </footer>
+    <?php include("./src/php/layouts/footer.php"); ?>
 </body>
 
 </html>

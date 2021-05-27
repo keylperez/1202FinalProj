@@ -1,17 +1,101 @@
 .navUserIcon {
   grid-column: 5 / -1;
   justify-self: stretch;
-  display: grid;
-  grid-template-columns: 50% 25% 25%;
-  .user_icon {
-    display: inline;
-    max-width: 45px;
-    border-radius: 100%;
-    margin: 5px;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  padding: 0 30px;
+
+  label {
+    position: relative;
+    display: inline-block;
+
+    .dropDown {
+      display: none;
+      position: absolute;
+      // width: 150px;
+      height: 200px;
+      background-color: $primary-color;
+      color: white;
+      border: 2px solid $primary-color-light;
+      border-radius: 10px;
+      a {
+        // display: block;
+        text-decoration: none;
+        color: white;
+        padding: 5px 0;
+        // width: 150px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 0.9rem;
+        .icon {
+          margin: 2px;
+          float: left;
+        }
+        span {
+          margin: auto 0;
+        }
+        &:first-child {
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+        }
+        &:last-child {
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+        &:hover {
+          background-color: rgba(#000000, 0.3);
+        }
+      }
+    }
+
+    input[type="checkbox"] {
+      display: none;
+      &:checked {
+        & ~ .dropDown {
+          display: grid;
+          justify-items: stretch;
+          align-items: stretch;
+          left: -20%;
+          z-index: 2;
+          animation: pulse 0.3s;
+          grid-template-columns: 150px;
+          grid-template-rows: 40px;
+        }
+      }
+    }
+
+    .user_icon {
+      // display: inline;
+      height: 35px;
+      width: auto;
+      border-radius: 100%;
+      margin: 5px;
+      cursor: pointer;
+      justify-self: end;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
   }
   .signOutBT {
-    justify-self: center;
+    justify-self: start;
     align-self: center;
     margin-left: 10px;
+    button {
+      @include buttons;
+      background-color: $tertiary-color;
+      color: white;
+      height: 25px;
+      width: 60px;
+      font-size: 0.7rem;
+      border: 2px solid $secondary-color-light;
+      transition: 0.3s;
+      &:hover {
+        border-color: $tertiary-color;
+        background-color: $secondary-color-light;
+        color: black;
+      }
+    }
   }
 }

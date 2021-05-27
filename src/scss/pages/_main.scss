@@ -1,4 +1,75 @@
 .mainBody {
   background-image: url("../img/bg/warframe-min.png");
   background-size: cover;
+
+  header {
+    grid-column: 1 / -1;
+    height: 100vh;
+    justify-items: stretch;
+    align-items: stretch;
+    overflow: hidden;
+    nav {
+      height: 60px;
+      grid-column: 1 / -1;
+      background-color: $primary-color;
+      .logo {
+        height: 20px;
+        width: 20px;
+      }
+    }
+    .sideBar {
+      grid-row: 2 / 3;
+      background-color: rgba($secondary-color-dark, 0.8);
+    }
+  }
+
+  .gameLabel {
+    height: 30px;
+    width: 90%;
+    margin: 3px auto;
+    background-color: $tertiary-color;
+    color: white;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.1s;
+    span {
+      display: inline-block;
+      width: 225px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 0.9rem;
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+    &Container {
+      height: 100%;
+    }
+  }
+
+  #searchBar {
+    height: 30px;
+    width: 350px;
+    margin: 3px auto;
+    background-color: $secondary-color;
+    color: white;
+    outline: none;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 340px;
+    padding: 5px;
+  }
+
+  .gameIcon {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    top: 50%;
+    left: 2.5%;
+    margin-right: 15px;
+    transform: translate(0, -50%);
+  }
 }

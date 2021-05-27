@@ -63,3 +63,19 @@ gameLabelContainer.addEventListener("click", function (e){ /*for the displaying 
             break;
     }
 });
+
+// const userIcon = document.querySelector(".user_icon");
+// const profileDropdown = document.querySelector(".pDropDown"); 
+
+// userIcon.addEventListener("mouseenter", function(e){
+//     console.log("dropdown Success");
+//     profileDropdown.style.display = "block";
+//     profileDropdown.style.height = "200px";
+// });
+
+// !userIcon.addEventListener("click", function(e){
+//     console.log("dropdown hidden");
+//     profileDropdown.style.display = "none";
+//     profileDropdown.style.height = "0";
+// });
+

@@ -22,24 +22,46 @@
   }
   .login {
     width: 500px;
-    border: 2px solid #ccc;
+    border: 2px solid $tertiary-color-light;
     border-radius: 15px;
     padding: 30px;
-    background: $tertiary-color-light;
+    background-image: url("../img/bg/48356144_1928080907246342_5804713124485398528_n.png");
+    // background-color: #add8e6;
     color: $primary-color-dark;
     grid-template-columns: 100%;
     gap: 10px;
   }
   button {
-    @extend %buttons;
+    @include buttons;
     justify-self: end;
-    background-color: $primary-color-light;
+    background-color: $secondary-color-light;
+    width: 150px;
+    height: 50px;
+    border: 2px solid $tertiary-color-light;
+    transition: 0.3s;
+    &:hover {
+      border-color: $secondary-color-light;
+      background-color: $tertiary-color-light;
+    }
   }
   .loginInputs {
-    border: 2px solid #ccc;
-    padding: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px;
     border-radius: 5px;
-    background: #ccc;
+    background: rgb(255, 255, 255);
+    grid-template-columns: 10% 90%;
+    .icon {
+      fill: $secondary-color-light;
+      justify-self: start;
+    }
+    input {
+      position: relative;
+      border: none;
+      background-color: rgba(0, 0, 0, 0);
+      outline: none;
+      height: 100%;
+      width: 90%;
+    }
   }
   .footer {
     position: fixed;
@@ -56,30 +78,32 @@
         vertical-align: middle;
       }
     }
+  }
+}
 
-    .icon {
-      width: 30px;
-      height: 30px;
-      fill: $secondary-color-light;
-      &:hover {
-        transform: scale(1.2);
-      }
-      &-facebook:hover {
-        fill: #1877f2;
-      }
-      &-instagram:hover {
-        fill: #e4405f;
-      }
-      &-twitter:hover {
-        fill: #1da1f2;
-      }
-      &-discord:hover {
-        fill: #7289da;
-      }
-      &-github:hover {
-        fill: #444444;
-      }
-    }
+.icon {
+  width: 30px;
+  height: 30px;
+  fill: $secondary-color-light;
+  &-facebook:hover {
+    fill: #1877f2;
+    transform: scale(1.2);
+  }
+  &-instagram:hover {
+    fill: #e4405f;
+    transform: scale(1.2);
+  }
+  &-twitter:hover {
+    fill: #1da1f2;
+    transform: scale(1.2);
+  }
+  &-discord:hover {
+    fill: #7289da;
+    transform: scale(1.2);
+  }
+  &-github:hover {
+    fill: #444444;
+    transform: scale(1.2);
   }
 }
 

@@ -1,11 +1,7 @@
 @mixin textBoxes {
 }
 
-%buttons {
-  border: none;
-  padding: 10px;
-  border-radius: 100px;
+@mixin buttons {
+  border-radius: 80px;
   cursor: pointer;
-  width: 150px;
-  height: 50px;
 }
