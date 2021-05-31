@@ -1,15 +1,18 @@
+
+@import "base/base";
+
 @import "abstracts/functions";
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/responsiveMixins";
+@import "abstracts/animations";
 
 // @import 'vendors/bootstrap';
 
-@import "base/base";
 // @import 'base/typography';
 
-@import "layout/grid";
 @import "layout/inventory";
+@import "layout/mainLayout";
 // @import 'layout/footer';
 // @import 'layout/sidebar';
 // @import 'layout/forms';
@@ -24,6 +27,7 @@
 
 @import "pages/main";
 @import "pages/login";
+@import "pages/settings";
 // @import 'pages/contact';
 
 // @import 'themes/theme';

@@ -13,14 +13,14 @@ if (isset($_SESSION["username"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Log In</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body class="loginPage">
-    <form action="src/php/signin_action.php" method="post" class="loginContainer">
+    <form action="src/php/actions/signin_action.php" method="post" class="loginContainer">
         <div class="login gridContainer">
             <h2>Login</h2>
             <?php if (isset($_GET['error'])) { ?>
@@ -31,14 +31,14 @@ if (isset($_SESSION["username"])) {
                 <svg class="icon icon-user">
                     <use xlink:href="./src/sprite.svg#icon-user"></use>
                 </svg>
-                <input type="text" name="username" placeholder="Username">
+                <input type="text" name="username" placeholder="Username" autocomplete="on" autocapitalize="off" autofocus required maxlength="10">
             </div>
             <label style="margin-top: 10px;">Password: </label>
             <div class="loginInputs gridContainer">
                 <svg class="icon icon-key">
                     <use xlink:href="./src/sprite.svg#icon-key"></use>
                 </svg>
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Password" autocomplete="on" autocapitalize="off" required maxlength="20">
             </div>
             <button type="submit" style="margin-top: 10px;">Login</button>
             <div>

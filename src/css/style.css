@@ -19,14 +19,50 @@ body {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%; }
 
+@keyframes dropDown {
+  from {
+    height: 0px; }
+  to {
+    height: 200px; } }
+
+@keyframes reverseDropDown {
+  from {
+    height: 100%; }
+  to {
+    height: 0px; } }
+
+@keyframes left2right {
+  from {
+    width: 0px; }
+  to {
+    width: 100%; } }
+
+@keyframes left2rightMain {
+  from {
+    width: 0px; }
+  to {
+    width: 90%; } }
+
+@keyframes displayers {
+  from {
+    color: #3a2f28; }
+  to {
+    color: white; } }
+
+@keyframes inventorySlide {
+  from {
+    margin-left: 50%; }
+  to {
+    margin-left: 30px; } }
+
 .inventoryBar {
-  position: relative;
   display: none;
   overflow: auto;
   height: 94vh;
   padding: 50px;
   padding-top: 300px;
-  margin: 0 30px 0 30px; }
+  margin: 0 30px 0 30px;
+  animation: inventorySlide 1s ease-in-out; }
   .inventoryBar::-webkit-scrollbar {
     display: none; }
   .inventoryBarContainer {
@@ -64,7 +100,7 @@ body {
   margin: 0 auto;
   margin-top: 50px;
   grid-column: 1 / -1;
-  grid-template-columns: repeat(6, 150px);
+  grid-template-columns: repeat(6, 150px) !important;
   grid-template-rows: repeat(4, 150px);
   justify-items: stretch;
   align-items: stretch;
@@ -100,11 +136,48 @@ body {
 .activeTab {
   display: grid; }
 
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #17131c;
+  width: 100%;
+  height: 80px;
+  font-size: 1rem;
+  padding: 20px; }
+  .footer a {
+    text-decoration: none;
+    margin: 0 auto;
+    color: #fff; }
+    .footer a span {
+      vertical-align: middle; }
+  .footer .socialMedia {
+    grid-column: 1 / 3; }
+    .footer .socialMedia .icon {
+      width: 30px;
+      height: 30px;
+      fill: #709c81;
+      transition: 0.3s; }
+      .footer .socialMedia .icon-facebook:hover {
+        fill: #1877f2;
+        transform: scale(1.2); }
+      .footer .socialMedia .icon-instagram:hover {
+        fill: #e4405f;
+        transform: scale(1.2); }
+      .footer .socialMedia .icon-twitter:hover {
+        fill: #1da1f2;
+        transform: scale(1.2); }
+      .footer .socialMedia .icon-discord:hover {
+        fill: #7289da;
+        transform: scale(1.2); }
+      .footer .socialMedia .icon-github:hover {
+        fill: #969696;
+        transform: scale(1.2); }
+
 .navUserIcon {
   grid-column: 5 / -1;
   justify-self: stretch;
   align-items: center;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 100%;
   padding: 0 30px; }
   .navUserIcon label {
     position: relative;
@@ -116,66 +189,71 @@ body {
       background-color: #2f283a;
       color: white;
       border: 2px solid #786694;
-      border-radius: 10px; }
-      .navUserIcon label .dropDown a {
+      border-radius: 10px;
+      justify-items: stretch;
+      align-items: stretch;
+      left: -30%;
+      z-index: 2;
+      grid-template-columns: 150px;
+      grid-template-rows: 40px 40px 40px; }
+      .navUserIcon label .dropDown-items {
+        grid-template-columns: 20% 80%;
+        justify-items: start;
+        align-items: center;
         text-decoration: none;
         color: white;
-        padding: 5px 0;
-        text-align: center;
-        vertical-align: middle;
-        font-size: 0.9rem; }
-        .navUserIcon label .dropDown a .icon {
+        padding: 5px 3px;
+        font-size: 0.9rem;
+        cursor: pointer; }
+        .navUserIcon label .dropDown-items .icon {
           margin: 2px;
-          float: left; }
-        .navUserIcon label .dropDown a span {
+          margin-left: 5px;
+          width: 20px;
+          justify-self: center;
+          fill: #709c81;
+          height: 20px; }
+        .navUserIcon label .dropDown-items span,
+        .navUserIcon label .dropDown-items button {
           margin: auto 0; }
-        .navUserIcon label .dropDown a:first-child {
+        .navUserIcon label .dropDown-items button {
+          background: none;
+          border: none;
+          text-decoration: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          outline: none;
+          color: inherit;
+          font-family: inherit;
+          font-size: inherit;
+          cursor: pointer; }
+        .navUserIcon label .dropDown-items:first-child {
           border-top-left-radius: 8px;
           border-top-right-radius: 8px; }
-        .navUserIcon label .dropDown a:last-child {
+        .navUserIcon label .dropDown-items:last-child {
           border-bottom-left-radius: 8px;
           border-bottom-right-radius: 8px; }
-        .navUserIcon label .dropDown a:hover {
+        .navUserIcon label .dropDown-items:hover {
           background-color: rgba(0, 0, 0, 0.3); }
     .navUserIcon label input[type="checkbox"] {
       display: none; }
       .navUserIcon label input[type="checkbox"]:checked ~ .dropDown {
         display: grid;
-        justify-items: stretch;
-        align-items: stretch;
-        left: -20%;
-        z-index: 2;
-        animation: pulse 0.3s;
-        grid-template-columns: 150px;
-        grid-template-rows: 40px; }
+        animation: dropDown 0.3s; }
+        .navUserIcon label input[type="checkbox"]:checked ~ .dropDown ~ .dropDown-items {
+          animation: dropDown 0.3s; }
+      .navUserIcon label input[type="checkbox"]:checked ~ .user_icon {
+        border: 2px solid #709c81; }
     .navUserIcon label .user_icon {
       height: 35px;
       width: auto;
       border-radius: 100%;
+      border: 2px solid rgba(0, 0, 0, 0);
       margin: 5px;
       cursor: pointer;
       justify-self: end;
       transition: 0.3s; }
       .navUserIcon label .user_icon:hover {
-        transform: scale(1.2); }
-  .navUserIcon .signOutBT {
-    justify-self: start;
-    align-self: center;
-    margin-left: 10px; }
-    .navUserIcon .signOutBT button {
-      border-radius: 80px;
-      cursor: pointer;
-      background-color: #3a2f28;
-      color: white;
-      height: 25px;
-      width: 60px;
-      font-size: 0.7rem;
-      border: 2px solid #709c81;
-      transition: 0.3s; }
-      .navUserIcon .signOutBT button:hover {
-        border-color: #3a2f28;
-        background-color: #709c81;
-        color: black; }
+        border: 2px solid #709c81; }
 
 .mainBody {
   background-image: url("../img/bg/warframe-min.png");
@@ -204,31 +282,20 @@ body {
     color: white;
     outline: none;
     border-radius: 20px;
-    transition: 0.1s; }
+    transition: 0.1s;
+    animation: left2rightMain 1s ease-in-out; }
     .mainBody .gameLabel span {
       display: inline-block;
-      width: 225px;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
-      font-size: 0.9rem; }
+      text-overflow: clip;
+      font-size: 0.9rem;
+      animation: displayers 1.5s ease-in; }
     .mainBody .gameLabel:hover {
       cursor: pointer;
       transform: scale(1.05); }
     .mainBody .gameLabelContainer {
       height: 100%; }
-  .mainBody #searchBar {
-    height: 30px;
-    width: 350px;
-    margin: 3px auto;
-    background-color: #283a2f;
-    color: white;
-    outline: none;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-top: 20px;
-    width: 340px;
-    padding: 5px; }
   .mainBody .gameIcon {
     position: relative;
     height: 25px;
@@ -239,16 +306,16 @@ body {
     transform: translate(0, -50%); }
 
 .loginPage {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/bg/allGameBg.jpg");
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg/allGameBg.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg/allGameBg.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../img/bg/allGameBg.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0.8) 80%), url("../img/bg/allGameBg.jpg");
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.5) 80%), url("../img/bg/allGameBg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow-y: auto; }
   .loginPage .loginContainer {
     position: absolute;
     left: 50%;
-    top: 25%;
+    top: 10%;
     transform: translate(-50%); }
   .loginPage .login {
     width: 500px;
@@ -259,6 +326,25 @@ body {
     color: #17131c;
     grid-template-columns: 100%;
     gap: 10px; }
+    .loginPage .loginInputs {
+      border: 2px solid white;
+      padding: 5px;
+      border-radius: 5px;
+      background: white;
+      grid-template-columns: 10% 90%;
+      animation: left2right 1s ease-out; }
+      .loginPage .loginInputs .icon {
+        fill: #709c81;
+        justify-self: start;
+        align-self: center;
+        width: 30px;
+        height: 30px; }
+      .loginPage .loginInputs input {
+        position: relative;
+        border: none;
+        background-color: rgba(0, 0, 0, 0);
+        outline: none;
+        width: 90%; }
   .loginPage button {
     border-radius: 80px;
     cursor: pointer;
@@ -271,63 +357,10 @@ body {
     .loginPage button:hover {
       border-color: #709c81;
       background-color: #a38a7a; }
-  .loginPage .loginInputs {
-    border: 2px solid white;
-    padding: 5px;
-    border-radius: 5px;
-    background: white;
-    grid-template-columns: 10% 90%; }
-    .loginPage .loginInputs .icon {
-      fill: #709c81;
-      justify-self: start; }
-    .loginPage .loginInputs input {
-      position: relative;
-      border: none;
-      background-color: rgba(0, 0, 0, 0);
-      outline: none;
-      height: 100%;
-      width: 90%; }
-  .loginPage .footer {
-    position: fixed;
-    bottom: 0;
-    background-color: #17131c;
-    width: 100%;
-    height: 80px;
-    font-size: 1rem;
-    padding: 20px; }
-    .loginPage .footer a {
-      text-decoration: none;
-      margin: 0 auto; }
-      .loginPage .footer a span {
-        vertical-align: middle; }
-
-.icon {
-  width: 30px;
-  height: 30px;
-  fill: #709c81; }
-  .icon-facebook:hover {
-    fill: #1877f2;
-    transform: scale(1.2); }
-  .icon-instagram:hover {
-    fill: #e4405f;
-    transform: scale(1.2); }
-  .icon-twitter:hover {
-    fill: #1da1f2;
-    transform: scale(1.2); }
-  .icon-discord:hover {
-    fill: #7289da;
-    transform: scale(1.2); }
-  .icon-github:hover {
-    fill: #444444;
-    transform: scale(1.2); }
-
-.socialMedia {
-  grid-column: 1 / 3; }
 
 .error {
   background: #f2dede;
   color: #a94442;
   padding: 10px;
-  width: 95%;
-  border-radius: 5px;
-  margin: 20px auto; }
+  width: 100%;
+  border-radius: 5px; }

@@ -12,10 +12,10 @@ if (isset($_POST['name']) && isset($_POST['username']) && isset($_POST['password
 	$cPass = trim($_POST['cPassword']);
 
 	if (empty($name) || empty($uname) || empty($pass) || empty($cPass)) {
-		header("Location: ../../sign_up.php?error=Please Fill All Fields");
+		header("Location: ../../../sign_up.php?error=Please Fill All Fields");
 		exit();
 	} else if ($pass != $cPass) {
-		header("Location: ../../sign_up.php?error=Confirm Password not matching");
+		header("Location: ../../../sign_up.php?error=Confirm Password not matching");
 		exit();
 	} else {
 		$stmt = $conn->prepare("SELECT username FROM users WHERE username = '$uname'");
@@ -28,10 +28,10 @@ if (isset($_POST['name']) && isset($_POST['username']) && isset($_POST['password
 			// $stmt->bind_param("sss", $uname, $pass, $name);
 			$stmt->execute();
 			$stmt->store_result();
-			header("Location: ../../sign_up.php?created=Account created successfully");
+			header("Location: ../../../sign_up.php?created=Account created successfully");
 			$stmt->close();
 		} else {
-			header("Location: ../../sign_up.php?error=Email already exists");
+			header("Location: ../../../sign_up.php?error=Email already exists");
 		}
 	}
 }

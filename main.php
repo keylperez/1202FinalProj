@@ -29,17 +29,25 @@ if (!isset($_SESSION["username"])) {
                     <input type="checkbox" id="profileLabel">
                     <img class="user_icon" src="src/img/icons/user_kris.gif" alt="icon">
                     <div class="dropDown">
-                        <a href="" class="pdropDown">
+                        <a href="" class="dropDown-items gridContainer">
                             <svg class="icon icon-user">
                                 <use xlink:href="./src/sprite.svg#icon-user"></use>
-                            </svg><span>Account</span></a>
-                        <a href="" class="pdropDown">Settings</a>
+                            </svg><span><?php echo $_SESSION['username']; ?></span></a>
+                        <a href="./src/php/pages/settings.php" class="dropDown-items gridContainer">
+                            <svg class="icon icon-settings">
+                                <use xlink:href="./src/sprite.svg#icon-settings"></use>
+                            </svg><span>Settings</span></a>
+                        <form action="src/php/actions/signout_action.php" class="dropDown-items gridContainer">
+                            <svg class="icon icon-log-out">
+                                <use xlink:href="./src/sprite.svg#icon-log-out"></use>
+                            </svg><button>Sign out</button>
+                        </form>
                         <!-- <a href="" class="pdropDown"></a>
                         <a href="" class="pdropDown"></a>
                         <a href="" class="pdropDown"></a> -->
                     </div>
                 </label>
-                <form action="src/php/signout_action.php" class="signOutBT"><button>Sign out</button></form>
+
             </div>
 
         </nav>

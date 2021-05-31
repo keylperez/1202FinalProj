@@ -10,10 +10,10 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 	$pass = trim($_POST['password']);
 
 	if (empty($uname)) {
-		header("Location: ../../index.php?error=Username is required");
+		header("Location: ../../../index.php?error=Username is required");
 		exit();
 	} else if (empty($pass)) {
-		header("Location: ../../index.php?error=Password is required");
+		header("Location: ../../../index.php?error=Password is required");
 		exit();
 	} else {
 		$stmt = $conn->prepare("SELECT username, password FROM users WHERE username = '$uname' AND password = '$pass'");
@@ -27,13 +27,13 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 		if ($numrows > 0) {
 			$_SESSION['username'] = $dbusername;
-			header("Location: ../../main.php");
+			header("Location: ../../../main.php");
 			exit();
 		} else {
-			header("Location: ../../index.php?error=Incorect Username or password");
+			header("Location: ../../../index.php?error=Incorect Username or password");
 			exit();
 		}
 	}
-	header("Location: ../../index.php");
+	header("Location: ../../../index.php");
 	exit();
 }

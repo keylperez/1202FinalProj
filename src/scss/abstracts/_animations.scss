@@ -1,0 +1,53 @@
+@keyframes dropDown {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+@keyframes reverseDropDown {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0px;
+  }
+}
+
+@keyframes left2right {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes left2rightMain {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+@keyframes displayers {
+  from {
+    color: $tertiary-color;
+  }
+  to {
+    color: white;
+  }
+}
+
+@keyframes inventorySlide {
+  from {
+    margin-left: 50%;
+  }
+  to {
+    margin-left: 30px;
+  }
+}

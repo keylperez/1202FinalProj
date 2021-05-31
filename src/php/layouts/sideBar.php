@@ -9,6 +9,6 @@
         <div class="gameLabel" data-tab="7"><img src="./src/img/icons/valorant-game-logo-icon-eps-10-gaming-streamer-vector-33193787.jpg" alt="" class="gameIcon"><span>Valorant</span></div>
         <div class="gameLabel" data-tab="8"><img src="./src/img/icons/apex.jpg" alt="" class="gameIcon"><span>Apex Legends</span></div>
         <div class="gameLabel" data-tab="9"><img src="./src/img/icons/tf2.png" alt="" class="gameIcon"><span>Team Fortress 2</span></div>
-        <div class="gameLabel" data-tab="10"><img src="./src/img/icons/pubg.jpg" alt="" class="gameIcon"><span>PLAYERUNKOWN'S BATTLEGROUNDS</span></div>
+        <div class="gameLabel" data-tab="10"><img src="./src/img/icons/pubg.jpg" alt="" class="gameIcon"><span>PUBG</span></div>
     </div>
 </div>

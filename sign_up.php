@@ -13,7 +13,7 @@
 
 <body class="loginPage">
     <div class="loginPos">
-        <form action="src/php/signup_action.php" method="post" class="loginContainer">
+        <form action="src/php/actions/signup_action.php" method="post" class="loginContainer">
             <div class="login gridContainer">
                 <h2>Login</h2>
                 <?php if (isset($_GET['error'])) { ?>
@@ -27,28 +27,28 @@
                     <svg class="icon icon-tie">
                         <use xlink:href="./src/sprite.svg#icon-user-tie"></use>
                     </svg>
-                    <input class="loginInputs" type="text" name="name" placeholder="Name">
+                    <input class="loginInputs" type="text" name="name" placeholder="Name" autocomplete="off" autocapitalize="on" autofocus required maxlength="30">
                 </div>
                 <label style="margin-top: 10px;">Username: </label>
                 <div class="loginInputs gridContainer">
                     <svg class="icon icon-user">
                         <use xlink:href="./src/sprite.svg#icon-user"></use>
                     </svg>
-                    <input type="text" name="username" placeholder="Username">
+                    <input type="text" name="username" placeholder="Username" autocomplete="on" autocapitalize="off" required maxlength="10">
                 </div>
                 <label style="margin-top: 10px;">Password: </label>
                 <div class="loginInputs gridContainer">
                     <svg class="icon icon-key">
                         <use xlink:href="./src/sprite.svg#icon-key"></use>
                     </svg>
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" autocomplete="on" autocapitalize="off" required maxlength="20">
                 </div>
                 <label>Confirm Password: </label>
                 <div class="loginInputs gridContainer">
                     <svg class="icon icon-lock">
                         <use xlink:href="./src/sprite.svg#icon-lock"></use>
                     </svg>
-                    <input class="loginInputs" type="password" name="cPassword" placeholder="Password">
+                    <input class="loginInputs" type="password" name="cPassword" placeholder="Password" autocomplete="on" autocapitalize="off" required maxlength="20">
                 </div>
                 <button type="submit">Sign Up</button>
                 <div>

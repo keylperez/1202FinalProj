@@ -32,13 +32,15 @@
     outline: none;
     border-radius: 20px;
     transition: 0.1s;
+    animation: left2rightMain 1s ease-in-out;
     span {
       display: inline-block;
-      width: 225px;
+      // width: 225px;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;
+      text-overflow: clip;
       font-size: 0.9rem;
+      animation: displayers 1.5s ease-in;
     }
     &:hover {
       cursor: pointer;
@@ -49,20 +51,6 @@
     }
   }
 
-  #searchBar {
-    height: 30px;
-    width: 350px;
-    margin: 3px auto;
-    background-color: $secondary-color;
-    color: white;
-    outline: none;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-top: 20px;
-    width: 340px;
-    padding: 5px;
-  }
-
   .gameIcon {
     position: relative;
     height: 25px;
@@ -71,5 +59,6 @@
     left: 2.5%;
     margin-right: 15px;
     transform: translate(0, -50%);
+    // animation: left2rightMain 1s ease-out;
   }
 }
