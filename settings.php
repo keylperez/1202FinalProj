@@ -26,6 +26,7 @@ if (!isset($_SESSION["username"])) {
                 <img class="user_icon" src="./src/img/icons/user_kris.gif" alt="icon">
                 <span><?php echo $_SESSION['username']; ?></span>
             </div>
+            <div class="basicAcc"><span>Account</span></div>
     </header>
     <?php include("./src/php/layouts/footer.php"); ?>
 </body>
