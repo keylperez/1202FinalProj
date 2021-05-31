@@ -20,37 +20,10 @@ if (!isset($_SESSION["username"])) {
     <script defer src="./src/js/script.js"></script>
 </head>
 
-<body class="mainBody gridContainer">
-    <header class="gridContainer">
-        <nav class="gridContainer">
-            <img src="" alt="logo" class="logo">
-            <div class="navUserIcon gridContainer">
-                <label for="profileLabel">
-                    <input type="checkbox" id="profileLabel">
-                    <img class="user_icon" src="src/img/icons/user_kris.gif" alt="icon">
-                    <div class="dropDown">
-                        <a href="" class="dropDown-items gridContainer">
-                            <svg class="icon icon-user">
-                                <use xlink:href="./src/sprite.svg#icon-user"></use>
-                            </svg><span><?php echo $_SESSION['username']; ?></span></a>
-                        <a href="./src/php/pages/settings.php" class="dropDown-items gridContainer">
-                            <svg class="icon icon-settings">
-                                <use xlink:href="./src/sprite.svg#icon-settings"></use>
-                            </svg><span>Settings</span></a>
-                        <form action="src/php/actions/signout_action.php" class="dropDown-items gridContainer">
-                            <svg class="icon icon-log-out">
-                                <use xlink:href="./src/sprite.svg#icon-log-out"></use>
-                            </svg><button>Sign out</button>
-                        </form>
-                        <!-- <a href="" class="pdropDown"></a>
-                        <a href="" class="pdropDown"></a>
-                        <a href="" class="pdropDown"></a> -->
-                    </div>
-                </label>
+<body class="bodyMain gridContainer">
+    <header class="headerMain gridContainer">
+        <?php include("./src/php/layouts/nav.php"); ?>
 
-            </div>
-
-        </nav>
         <?php include("./src/php/layouts/sideBar.php"); ?>
         <div class="inventoryBarContainer">
             <div class="inventoryBar inventoryBar--1 gridContainer activeTab">

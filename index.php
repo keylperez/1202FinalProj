@@ -19,7 +19,7 @@ if (isset($_SESSION["username"])) {
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
-<body class="loginPage">
+<body class="bodyLogin">
     <form action="src/php/actions/signin_action.php" method="post" class="loginContainer">
         <div class="login gridContainer">
             <h2>Login</h2>

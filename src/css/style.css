@@ -10,6 +10,7 @@ html {
   box-sizing: border-box; }
 
 body {
+  background-color: #a38a7a;
   font-family: "Raleway", sans-serif;
   color: white;
   font-weight: 400;
@@ -136,6 +137,14 @@ body {
 .activeTab {
   display: grid; }
 
+nav {
+  height: 60px;
+  grid-column: 1 / -1;
+  background-color: #2f283a; }
+  nav .logo {
+    height: 20px;
+    width: 20px; }
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -156,6 +165,7 @@ body {
       width: 30px;
       height: 30px;
       fill: #709c81;
+      color: #709c81;
       transition: 0.3s; }
       .footer .socialMedia .icon-facebook:hover {
         fill: #1877f2;
@@ -172,6 +182,9 @@ body {
       .footer .socialMedia .icon-github:hover {
         fill: #969696;
         transform: scale(1.2); }
+  .footer .details {
+    grid-template-columns: 30% 30% 30%;
+    justify-items: center; }
 
 .navUserIcon {
   grid-column: 5 / -1;
@@ -255,26 +268,19 @@ body {
       .navUserIcon label .user_icon:hover {
         border: 2px solid #709c81; }
 
-.mainBody {
+.bodyMain {
   background-image: url("../img/bg/warframe-min.png");
   background-size: cover; }
-  .mainBody header {
+  .bodyMain .headerMain {
     grid-column: 1 / -1;
     height: 100vh;
     justify-items: stretch;
     align-items: stretch;
     overflow: hidden; }
-    .mainBody header nav {
-      height: 60px;
-      grid-column: 1 / -1;
-      background-color: #2f283a; }
-      .mainBody header nav .logo {
-        height: 20px;
-        width: 20px; }
-    .mainBody header .sideBar {
+    .bodyMain .headerMain .sideBar {
       grid-row: 2 / 3;
       background-color: rgba(19, 28, 23, 0.8); }
-  .mainBody .gameLabel {
+  .bodyMain .gameLabel {
     height: 30px;
     width: 90%;
     margin: 3px auto;
@@ -284,19 +290,19 @@ body {
     border-radius: 20px;
     transition: 0.1s;
     animation: left2rightMain 1s ease-in-out; }
-    .mainBody .gameLabel span {
+    .bodyMain .gameLabel span {
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: clip;
       font-size: 0.9rem;
       animation: displayers 1.5s ease-in; }
-    .mainBody .gameLabel:hover {
+    .bodyMain .gameLabel:hover {
       cursor: pointer;
       transform: scale(1.05); }
-    .mainBody .gameLabelContainer {
+    .bodyMain .gameLabelContainer {
       height: 100%; }
-  .mainBody .gameIcon {
+  .bodyMain .gameIcon {
     position: relative;
     height: 25px;
     width: 25px;
@@ -305,19 +311,19 @@ body {
     margin-right: 15px;
     transform: translate(0, -50%); }
 
-.loginPage {
+.bodyLogin {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("../img/bg/allGameBg.jpg");
   background-image: -o-linear-gradient(rgba(0, 0, 0, 0.8) 80%, rgba(0, 0, 0, 0.8) 80%), url("../img/bg/allGameBg.jpg");
   background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0.5) 80%), url("../img/bg/allGameBg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow-y: auto; }
-  .loginPage .loginContainer {
+  .bodyLogin .loginContainer {
     position: absolute;
     left: 50%;
     top: 10%;
     transform: translate(-50%); }
-  .loginPage .login {
+  .bodyLogin .login {
     width: 500px;
     border: 2px solid #a38a7a;
     border-radius: 15px;
@@ -326,26 +332,26 @@ body {
     color: #17131c;
     grid-template-columns: 100%;
     gap: 10px; }
-    .loginPage .loginInputs {
+    .bodyLogin .loginInputs {
       border: 2px solid white;
       padding: 5px;
       border-radius: 5px;
       background: white;
       grid-template-columns: 10% 90%;
       animation: left2right 1s ease-out; }
-      .loginPage .loginInputs .icon {
+      .bodyLogin .loginInputs .icon {
         fill: #709c81;
         justify-self: start;
         align-self: center;
         width: 30px;
         height: 30px; }
-      .loginPage .loginInputs input {
+      .bodyLogin .loginInputs input {
         position: relative;
         border: none;
         background-color: rgba(0, 0, 0, 0);
         outline: none;
         width: 90%; }
-  .loginPage button {
+  .bodyLogin button {
     border-radius: 80px;
     cursor: pointer;
     justify-self: end;
@@ -354,7 +360,7 @@ body {
     height: 50px;
     border: 2px solid #a38a7a;
     transition: 0.3s; }
-    .loginPage button:hover {
+    .bodyLogin button:hover {
       border-color: #709c81;
       background-color: #a38a7a; }
 
@@ -364,3 +370,18 @@ body {
   padding: 10px;
   width: 100%;
   border-radius: 5px; }
+
+.bodySettings header {
+  grid-column: 1 / -1;
+  grid-template-columns: 20% 80%; }
+  .bodySettings header .sideBarSettings {
+    height: 100vh;
+    background-color: rgba(47, 40, 58, 0.5);
+    grid-template-columns: 100%;
+    grid-template-rows: 30% repeat(7, 10%); }
+    .bodySettings header .sideBarSettings .settingsUserIcon img {
+      width: 50px;
+      height: auto;
+      border-radius: 50%;
+      grid-template-columns: 30% 70%;
+      align-items: center; }

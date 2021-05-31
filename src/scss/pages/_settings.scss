@@ -1,0 +1,21 @@
+.bodySettings {
+  header {
+    grid-column: 1 / -1;
+    grid-template-columns: 20% 80%;
+    .sideBarSettings {
+      height: 100vh;
+      background-color: rgba($primary-color, 0.5);
+      grid-template-columns: 100%;
+      grid-template-rows: 30% repeat(7, 10%);
+      .settingsUserIcon {
+        img {
+          width: 50px;
+          height: auto;
+          border-radius: 50%;
+          grid-template-columns: 30% 70%;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

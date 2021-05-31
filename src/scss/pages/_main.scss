@@ -1,22 +1,14 @@
-.mainBody {
+.bodyMain {
   background-image: url("../img/bg/warframe-min.png");
   background-size: cover;
 
-  header {
+  .headerMain {
     grid-column: 1 / -1;
     height: 100vh;
     justify-items: stretch;
     align-items: stretch;
     overflow: hidden;
-    nav {
-      height: 60px;
-      grid-column: 1 / -1;
-      background-color: $primary-color;
-      .logo {
-        height: 20px;
-        width: 20px;
-      }
-    }
+
     .sideBar {
       grid-row: 2 / 3;
       background-color: rgba($secondary-color-dark, 0.8);
