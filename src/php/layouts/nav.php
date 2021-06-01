@@ -1,5 +1,5 @@
 <nav class="gridContainer">
-    <img src="" alt="logo" class="logo">
+    <img src="./src/img/icons/logo.png" alt="logo" class="logo">
     <div class="navUserIcon gridContainer">
         <label for="profileLabel">
             <input type="checkbox" id="profileLabel">

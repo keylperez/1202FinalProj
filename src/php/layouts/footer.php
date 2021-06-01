@@ -26,9 +26,9 @@
             </svg>
         </a>
     </div>
-    <div class="details gridContainer">
+    <!-- <div class="details gridContainer">
         <a href="./aboutUs.php" class="footerLink"><span>About Us</span></a>
         <a href="./supportUs.php" class="footerLink"><span>Support Us</span></a>
         <a href="./contactUs.php" class="footerLink"><span>Contact Us</span></a>
-    </div>
+    </div> -->
 </footer>
